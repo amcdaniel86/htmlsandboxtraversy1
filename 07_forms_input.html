@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms & Input</title>
+</head>
+<body>
+    <!-- Forms -->
+  <form action="">
+    <!-- action is where the form is going to be submitted to. sometimes to file, server, etc. -->
+      <div>
+        <!-- divs are divisions, separates markup in certain ways. -->
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name">
+          <!-- label for attribute NEEDS to MATCH id attribute input tag. will enable when label is clicked by user, the form input will be highlighted, nice feature.-->
+          <!-- name attribute is used server side, whatever the value is. -->
+      </div>
+      <div>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email">
+        <!-- notice, label for matches input id, so it highlights and EASY VALIDATION email name will ensure email is only format allowed. -->
+      </div>
+      <div>
+        <label for="message">Message</label><br>
+        <textarea name="message" id="message"  cols="50" rows="5"></textarea>
+        <!-- cols - horizontal length, rows - vertical length -->
+      </div>
+      <div>
+        <label for="sex">Sex</label>
+        <select name="sex" id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="age">Age</label><br>
+        <input type="number" name="age" id="age">
+        <!-- number field good for ages, stuff like that etc. -->
+      </div>
+      <div>
+        <label for="birthdate">Birthdate</label><br>
+        <input type="date" name="birthdate" id="birthdate">
+        <!-- type date pulls up a calendar on the website, very handy -->
+      </div>
+      <div>
+        <label for="membership">Membership</label>
+        <input type="radio" name="membership" value="simple" id="membership"> Simple
+        <input type="radio" name="membership" value="standard" id="membership" checked> Standard
+        <input type="radio" name="membership" value="super" id="membership"> Super
+        <!-- types of memberships or choices for subscription model, value= attribute is where you choose what kind it will be. type = radio, name and id match. -->
+      </div>
+  </form>
+</body>
+</html>
