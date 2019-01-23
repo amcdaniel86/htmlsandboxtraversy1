@@ -8,50 +8,86 @@
 </head>
 <body>
     <!-- Forms -->
-  <form action="">
+  <form action="process.php">
     <!-- action is where the form is going to be submitted to. sometimes to file, server, etc. -->
+
+    <!-- Text -->
       <div>
         <!-- divs are divisions, separates markup in certain ways. -->
           <label for="name">Name</label><br>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" value="John Doe">
           <!-- label for attribute NEEDS to MATCH id attribute input tag. will enable when label is clicked by user, the form input will be highlighted, nice feature.-->
           <!-- name attribute is used server side, whatever the value is. -->
+          <!-- value= pre enters content into input box. -->
       </div>
+
+      <!-- EMAIL -->
       <div>
         <label for="email">Email</label><br>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" placeholder="Enter an email">
         <!-- notice, label for matches input id, so it highlights and EASY VALIDATION email name will ensure email is only format allowed. -->
+        <!-- placeholder attribute - transparent directions in input box. -->
       </div>
+
+      <!-- Message -->
       <div>
         <label for="message">Message</label><br>
         <textarea name="message" id="message"  cols="50" rows="5"></textarea>
         <!-- cols - horizontal length, rows - vertical length -->
       </div>
+
+      <!-- Select -->
       <div>
         <label for="sex">Sex</label>
         <select name="sex" id="sex">
           <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="female" selected>Female</option>
+          <!-- selected attribute, no =, means it'll be pre-selected for users on the page. -->
           <option value="other">Other</option>
         </select>
       </div>
+      
+      <!-- Number -->
       <div>
         <label for="age">Age</label><br>
         <input type="number" name="age" id="age">
         <!-- number field good for ages, stuff like that etc. -->
       </div>
+      
+      <!-- Date -->
       <div>
         <label for="birthdate">Birthdate</label><br>
         <input type="date" name="birthdate" id="birthdate">
         <!-- type date pulls up a calendar on the website, very handy -->
       </div>
+      
+      <!-- Radio button -->
       <div>
         <label for="membership">Membership</label>
         <input type="radio" name="membership" value="simple" id="membership"> Simple
         <input type="radio" name="membership" value="standard" id="membership" checked> Standard
         <input type="radio" name="membership" value="super" id="membership"> Super
         <!-- types of memberships or choices for subscription model, value= attribute is where you choose what kind it will be. type = radio, name and id match. -->
+        <!-- checked attribute, no =, means the choice will be pre-chosen. -->
       </div>
+
+      <!-- Checkbox -->
+      <div>
+        <label for="membership">I Like..</label>
+        <input type="checkbox" name="likes" value="cike" id="likes" checked> Bike
+        <input type="checkbox" name="likes" value="car" id="likes" > Car
+        <input type="checkbox" name="likes" value="boat" id="likes"> Boat
+        <!-- types of memberships or choices for subscription model, value= attribute is where you choose what kind it will be. type = radio, name and id match. -->
+        <!-- checked attribute, no =, means the choice will be pre-chosen. -->
+        <!-- value is the info that gets sent to the server. -->
+      </div>  
+      <!-- Input submit -->
+      <input type="submit" value="Submit">
+      <!-- Button submit -->
+      <button type="submit">Submit</button>
+      <!-- quick way to type out tag:type is this: button:submit or input:checkbox or input:radio -->
+      <button type="reset">Reset</button>
+      
   </form>
 </body>
 </html>
