@@ -8,31 +8,30 @@
 </head>
 <body>
   
-  <!-- Unordered lists, unordered, bullet points -->
-  <ul style="list-style: square">
-    <!-- types of bullets, not recommended, style="list-style: circle, square, disc, none. PUT ALL STYLING IN CSS, only to know it exists " -->
+  <!-- Unordered lists -->
+  <ul>
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
     <li>Item 4</li>
   </ul>
+    <!-- unordered, bullet points, types of bullets, not recommended, style="list-style: circle, square, disc, none. PUT ALL STYLING IN CSS, only to know it exists " -->
 
 
   <!-- Ordered Lists -->
-    <ol type="1">
-      <!-- type="1, A, a, I, i" -->
+    <ol type="i"> <!-- types, "A, a, I, i-->
       <li>Item 1</li>
       <li>Item 2</li>
       <li>Item 3</li>
       <li>Item 4</li>
     </ol>
-
+ 
     <!-- Nested Lists -->
       <ul>
         <li>Item 1</li>
         <li>Item 2
           <ul>
-            <li>Nested Item 1</li>
+            <li>Nested Item 1</li> <!-- becomes new bulletpoint to circle-->
             <li>Nested Item 2</li>
           </ul>
         </li>
@@ -40,35 +39,35 @@
         <li>Item 4</li>
       </ul>
 
-      <!-- Tables only for tabular data-->
-      <!-- head, body, footer -->
-      <table style="width: 600px">
+      <!-- Tables -->
+      <table>
         <thead>
           <tr>
-            <th>First Name</th>
-            <!-- th only for the heading -->
+            <th>First Name (table heading row is th)</th>
             <th>Last Name</th>
             <th>Email</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>John</td>
+            <td>John (table data row is td)</td>
             <td>Doe</td>
             <td>jdoe@gmail.com</td>
           </tr>
           <tr>
-            <td>Kate</td>
+            <td>Kate (table data row is td)</td>
             <td>Smith</td>
-            <td>ksmith@gmail.com</td>
+            <td>kate@gmail.com</td>
           </tr>
           <tr>
-            <td>Jeff</td>
+            <td>Jeff (table data row is td)</td>
             <td>Wilson</td>
             <td>jeff@gmail.com</td>
           </tr>
         </tbody>
       </table>
+      <!-- Tables only for tabular data-->
+      <!-- head, body, footer -->
 
 </body>
 </html>
