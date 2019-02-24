@@ -7,87 +7,97 @@
   <title>Forms & Input</title>
 </head>
 <body>
+<!-- GREAT ONE TO COME BACK TO FOR form info -->
+
     <!-- Forms -->
-  <form action="process.php">
-    <!-- action is where the form is going to be submitted to. sometimes to file, server, etc. -->
+    <form action="process.php">
+      <!-- action="" attr is where the form is going to be submitted to. sometimes to file, server, etc. -->
 
-    <!-- Text -->
+      <!-- NAME / TEXT -->
       <div>
-        <!-- divs are divisions, separates markup in certain ways. -->
-          <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" value="John Doe">
-          <!-- label for attribute NEEDS to MATCH id attribute input tag. will enable when label is clicked by user, the form input will be highlighted, nice feature.-->
-          <!-- name attribute is used server side, whatever the value is. -->
-          <!-- value= pre enters content into input box. -->
+          <!-- divs are divisions, separates markup -->
+        <label for="name">Name</label>
+        <!-- label for="" attribute NEEDS to MATCH input tag's id="" attribute. will highlight input when label is clicked by user, form input will be highlighted, nice feature.-->
+        <input type="text" id="name" name="name" value="John Doe">
+        <!-- name attribute is used server side, whatever the value is. -->
+        <!-- value= pre enters content into input box. -->
       </div>
-
+      
       <!-- EMAIL -->
       <div>
-        <label for="email">Email</label><br>
+        <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Enter an email">
-        <!-- notice, label for matches input id, so it highlights and EASY VALIDATION email name will ensure email is only format allowed. -->
-        <!-- placeholder attribute - transparent directions in input box. -->
       </div>
-
+      <!-- notice, label for matches input id, so it highlights and EASY CLIENT-SIDE VALIDATION email name will ensure email is only format allowed. -->
+      
+      <!-- placeholder attribute - transparent directions in input box. -->
+      
       <!-- Message -->
       <div>
-        <label for="message">Message</label><br>
-        <textarea name="message" id="message"  cols="50" rows="5"></textarea>
+        <label for="message">Message</label>
+      
+        <textarea name="message" id="message" cols="50" rows="5"></textarea>
         <!-- cols - horizontal length, rows - vertical length -->
       </div>
-
+      
       <!-- Select -->
       <div>
         <label for="sex">Sex</label>
         <select name="sex" id="sex">
           <option value="male">Male</option>
           <option value="female" selected>Female</option>
-          <!-- selected attribute, no =, means it'll be pre-selected for users on the page. -->
+          <!-- selected attr means it'll be pre-chosen -->
           <option value="other">Other</option>
         </select>
-      </div>
+      </div> <!-- makes a dropdownmenu with the options as choices-->
+      <!-- selected attribute, no =, means it'll be pre-selected for users on the page. -->
       
       <!-- Number -->
       <div>
-        <label for="age">Age</label><br>
+        <label for="age">Age</label> <br>
         <input type="number" name="age" id="age">
-        <!-- number field good for ages, stuff like that etc. -->
       </div>
+      <!-- text looking box but has arrow for increasing numbers -->
       
       <!-- Date -->
       <div>
-        <label for="birthdate">Birthdate</label><br>
+        <label for="birthdate">Birthdate</label>
         <input type="date" name="birthdate" id="birthdate">
-        <!-- type date pulls up a calendar on the website, very handy -->
       </div>
+      <!-- type date pulls up a calendar on the website, very handy, nice format -->
       
       <!-- Radio button -->
       <div>
         <label for="membership">Membership</label>
         <input type="radio" name="membership" value="simple" id="membership"> Simple
-        <input type="radio" name="membership" value="standard" id="membership" checked> Standard
+        <input type="radio" name="membership" value="standard" id="membership"> Standard
         <input type="radio" name="membership" value="super" id="membership"> Super
-        <!-- types of memberships or choices for subscription model, value= attribute is where you choose what kind it will be. type = radio, name and id match. -->
-        <!-- checked attribute, no =, means the choice will be pre-chosen. -->
       </div>
-
+      <!-- types of memberships or choices for subscription model, value="" attribute is where you choose what kind it will be. type = radio, name / id attr match. -->
+      <!-- checked attribute, no = sign; means choice will be pre-chosen. -->
+      
       <!-- Checkbox -->
       <div>
-        <label for="membership">I Like..</label>
-        <input type="checkbox" name="likes" value="cike" id="likes" checked> Bike
-        <input type="checkbox" name="likes" value="car" id="likes" > Car
-        <input type="checkbox" name="likes" value="boat" id="likes"> Boat
-        <!-- types of memberships or choices for subscription model, value= attribute is where you choose what kind it will be. type = radio, name and id match. -->
-        <!-- checked attribute, no =, means the choice will be pre-chosen. -->
-        <!-- value is the info that gets sent to the server. -->
-      </div>  
-      <!-- Input submit -->
-      <input type="submit" value="Submit">
-      <!-- Button submit -->
-      <button type="submit">Submit</button>
-      <!-- quick way to type out tag:type is this: button:submit or input:checkbox or input:radio -->
-      <button type="reset">Reset</button>
+          <label for="membership">I Like...</label>
+          <input type="checkbox" name="likes" value="bike" id="likes"> Bike
+          <input type="checkbox" name="likes" value="car" id="likes"> Car
+          <input type="checkbox" name="likes" value="boat" id="likes"> Boat
+        </div>
+      <!-- types of memberships or choices for subscription model, value= attribute is where you choose what kind it will be. type = radio, name and id match. -->
+      <!-- checked attribute, no =, means the choice will be pre-chosen. -->
+      <!-- value is the info that gets sent to the server. -->
+      <!-- CTRL + D highlighted word, chooses same words for multi entry cursor -->
       
-  </form>
-</body>
-</html>
+      <!-- Input submit -->
+        <input type="submit" value="Submit"> <!-- self-closing tag -->
+              <!-- value="" attr is text that is shown in browser. -->
+      <!-- Button submit -->
+        <!-- <button type="submit">Submit</button> -->
+      <!-- quick way to type out tag:type is this: button:submit or input:checkbox or input:radio -->
+      
+      <button type="reset">Reset</button>
+      <!-- resets form back to default values -->
+    
+    </form>
+  </body>
+  </html>

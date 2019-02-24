@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Div, span, id and class</title>
+
+  <style>
+  .card {
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .enhance {
+    color: yellow;
+    background-color: #000;
+  }
+  </style>
 </head>
 <body>
-  <div id="main-header">
+  <div id="main-header" class="card">
     <!-- since everything in this div pertains to the header, should have an id of main-header, since there could be other headers. -->
-    <h1>My Website</h1>
-    <!-- REMEMBER ONLY one h1 per page. -->
+    <h1>My Website</h1>   <!-- REMEMBER ONLY one h1 per page. -->
     <p>A site about me</p>
   </div>
   <ul id="main-nav">
@@ -18,26 +31,31 @@
     <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
-  <div id="about">
-    <!-- #about pulls up a div with id about. -->
-    <!-- tag#about pulls up aforementioned tag with id of about, or whatever you want the id to be. -->
+    
+    <div id="about" class="card">
       <h3>About</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, delectus. Aperiam odio <span span="enhance"> ipsum error iusto dolor aliquam sequi, cupiditate inventore voluptatem </span> ut explicabo alias vitae harum, consectetur ea, suscipit quae? Dolorem consequuntur earum veniam possimus quis quia ipsa blanditiis minima.</p>
-  </div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum facere temporibus dignissimos <div class="enhance"> suscipit placeat? Quia provident explicabo quos dolorum rerum debitis</div> eveniet dolor, vero unde praesentium earum, molestiae obcaecati facere in est nisi doloremque. Dignissimos dolor quibusdam voluptate est aliquid?</p>
+    </div>
+    <!-- typing #about pulls up a div with id="about". -->
+    <!-- typing .about pulls up div with class="about" -->
+    <!-- tag #about pulls up aforementioned tag with id of about, or whatever you want the id to be. -->
 
-  <div id="contact">
-    <h3>Contact Me</h3>
-    <ul>
-      <li>Address: 50 Main street, Boston MA</li>
-      <li>Phone: (555) 555-5555</li>
-      <li>Email: me@somethingcool.com</li>
-    </ul>
-  </div>
+    <div id="contact">
+      <h3>Contact Me</h3>
+      <ul>
+        <li>Address: 50 Main St, Boston MA</li>
+        <li>Phone: (555) 555-5555</li>
+        <li>Email: me@somethingcool.com</li>
+      </ul>
+    </div>
 
-  <div id="footer">
-    <!-- only one id with a certain name, no multiple id's in different sections. class you can repeat. -->
-    <p>Copyright 2019</p>
-  </div>
+    <div id="footer">
+      <p>Copyright &copy; 2019</p>
+    </div>
+
+
+    <!-- only one section id with a certain name, no multiple id's in different sections. class you can repeat for multiple sections. -->
+
   <!-- div block level element, pushes next thing down. span is inline level element. great for styling within paragraphs for text.-->
 </body>
 </html>
